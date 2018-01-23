@@ -1,0 +1,156 @@
+#include<iostream>
+#include<cmath>
+#define Pi 3.141592654;
+using namespace std;
+double number1, number2, result;
+char choice;
+
+bool x = false;
+double standard();
+double power();
+double scinetific();
+int main(){
+	do{
+		system("cls");
+		cout << "         Scientific Calculator\n";
+		cout << "1-standard mathmatic\n";
+		cout << "2-power\n";
+		cout << "3-scinetific\n";
+		cout << "4-exit\n";
+		cout << "your choice ";
+		cin >> choice;
+		system("cls");
+		switch (choice)
+		{
+		case '1':{result = standard();
+			if (!x)cout << "your result = " << result << endl;
+		}break;
+		case '2':{result = power();
+			cout << "your result = " << result << endl;
+			break; }
+		case '3':{result = scinetific();
+			cout << "your result = " << result << endl; }
+			break;
+		default:
+			break;
+		}
+
+		system("pause");
+	} while (choice != '4');
+
+	system("pause");
+	return 0;
+}
+double standard(){
+	
+	cout << "1-adding\n";
+	cout << "2-subtraction\n";
+	cout << "3-multiplaying\n";
+	cout << "4-divide\n";
+	cout << "your choice ";
+	cin >> choice;
+	system("cls");
+	cout << "enter first number ";
+	cin >> number1;
+	cout << "enter second number ";
+	cin >> number2;
+	switch (choice)
+	{
+	case '1': return number1 + number2;
+		break;
+	case '2':return number1 - number2;
+		break;
+	case '3':return number1*number2;
+		break;
+	case '4':{choice = '0';
+				 while (number2 == 0){
+					 system("cls");
+					 cout << "can't divide on 0\n";
+					 cout << "press y to enter other number ";
+					 cin >> choice;
+					 if (choice == 'y' || choice == 'Y'){
+						 cout << "enter second number ";
+						 cin >> number2;
+					 }
+					 else {
+
+						 x = true;
+						 return 0;
+					 }
+				 }
+
+				 return number1 / number2;
+	}default:
+		break;
+	}
+
+}
+double power(){
+
+	cout << "1-power\n";
+	cout << "2-root\n";
+	cout << "3-factoril\n";
+	cout << "4-mod\n";
+	cout << "5-log\n";
+	cin >> choice;
+	system("cls");
+	cout << "enter the number ";
+	cin >> number1;
+
+	switch (choice)
+	{
+		
+	case '1':{cout << "enter the power ";
+		cin >> number2;
+		return pow(number1, number2);}
+	case '2':{cout << "enter your root degree ";
+		cin >> number2;
+		number2 = 1.0 / number2;
+		return pow(number1, number2);}
+	case '3':{double res=1;
+		for (int i = 1; i <= number1; i++)res *= i;
+		return res; }
+	case '4':{choice = '0';
+				 cout << "enter number2 ";
+		cin >> number2;
+		return static_cast<int>(number1) % static_cast<int>(number2); }
+	case '5':{
+				 
+			
+					 cout << "1-for base 2\n2-for base 10\nyourchoice "; cin >> number2;
+					 while (number2 != 1 && number2 != 2){
+						 system("cls");
+						 cout << "number2 should = 1 or 2\n";
+						 cout << "1-for base 2\n2-for base 10\nyourchoice "; cin >> number2;
+					 };
+				 if (number2 == 1)
+					 return log2(number1);
+				 else if (number2 == 2)
+					 return log10(number1);}
+	default:
+		break;
+	}
+}
+double scinetific(){
+	
+	cout << "1-sin\n";
+	cout << "2-cos\n";
+	cout << "3-tan\n";
+	cout << "your choice ";
+	cin >> choice;
+	system("cls");
+		cout << "enter your number ";
+	cin >> number1;
+	number1 = number1 / 180 * Pi;
+	switch (choice)
+	{
+	case '1':return sin(number1);
+	case '2':return cos(number1);
+	case '3':return tan(number1);
+	
+	default:
+		break;
+	}
+
+	return 0;
+}

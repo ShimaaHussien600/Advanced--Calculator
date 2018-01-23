@@ -1,0 +1,18 @@
+﻿Build started 24/08/2015 01:00:19 م.
+     1>Project "E:\Faculty\Project. summer course\Project of summer course\Project of summer course\Project of summer course.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         D:\Program Files (x86)\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
+         Source.cpp
+     1>e:\faculty\project. summer course\project of summer course\project of summer course\source.cpp(228): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+     1>e:\faculty\project. summer course\project of summer course\project of summer course\source.cpp(240): warning C4244: '=' : conversion from 'double' to 'int', possible loss of data
+     1>e:\faculty\project. summer course\project of summer course\project of summer course\source.cpp(267): warning C4244: '+=' : conversion from 'double' to 'int', possible loss of data
+     1>e:\faculty\project. summer course\project of summer course\project of summer course\source.cpp(99): warning C4715: 'standard' : not all control paths return a value
+     1>e:\faculty\project. summer course\project of summer course\project of summer course\source.cpp(157): warning C4715: 'power' : not all control paths return a value
+       Link:
+         D:\Program Files (x86)\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Faculty\Project. summer course\Project of summer course\Debug\Project of summer course.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Faculty\Project. summer course\Project of summer course\Debug\Project of summer course.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Faculty\Project. summer course\Project of summer course\Debug\Project of summer course.lib" /MACHINE:X86 Debug\Source.obj
+         Project of summer course.vcxproj -> E:\Faculty\Project. summer course\Project of summer course\Debug\Project of summer course.exe
+     1>Done Building Project "E:\Faculty\Project. summer course\Project of summer course\Project of summer course\Project of summer course.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.06
